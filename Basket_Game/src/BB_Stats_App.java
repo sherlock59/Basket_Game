@@ -1,8 +1,5 @@
 import java.util.Scanner;
 
-public static Scanner input = new Scanner(System.in);
-
-
 /**
  * Basketball Stats Application
  * 
@@ -144,7 +141,7 @@ public class BB_Stats_App {
         		
     		case 2:
     			updateTeamStats(team2);
-    			System.out.println();\
+    			System.out.println();
         		updateScoreboard();
         		System.out.println();
         		break;
@@ -236,7 +233,7 @@ public class BB_Stats_App {
 				player.shot(type, true);
 			
 			System.out.println();
-			
+		
 		} // end of if-else
 
 		player.quickStats();

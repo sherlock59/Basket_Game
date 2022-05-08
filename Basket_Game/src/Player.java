@@ -19,7 +19,19 @@ public class Player {
 	
 	private int fieldGoals_3pt;
 	
-	public Player() {}
+	public Player() {
+		name = null;
+		number = 0;
+		fouls = 0;
+		
+		attempts_1pt = 0;
+		attempts_2pt = 0;
+		attempts_3pt = 0;
+		
+		fieldGoals_1pt = 0;
+		fieldGoals_2pt = 0;
+		fieldGoals_3pt = 0;
+	}
 	
 	public Player(String Player1, int number) {}
 	
@@ -69,14 +81,33 @@ public class Player {
 		
 	public void foul() {}
 	
-	public void shot(int attempt, boolean field) {}
-	
-	public int getPoints() {
-		return  getPoints();
+	public void shot(int shotType, boolean made) {
+		switch (shotType) {
+		case 1:
+			attempts_1pt ++;
+			fieldGoals_1pt += made ? 1 : 0;
+			break;
+		case 2:
+			attempts_2pt ++;
+			fieldGoals_2pt += made ? 1 : 0;
+			break;
+		case 3:
+			attempts_3pt ++;
+			fieldGoals_3pt += made ? 1 : 0;
+		default:
+			System.out.println("Invalid shot type = " + shotType);
+			
+		}
 	}
 	
-	public void quickStats();
+	int percent_freeThrows = (getAttempts_1pt)
+	public int getPoints() {
+		return  getFie
+	Q}
 	
-	public void fullStats();
+	public void quickStats() {
+		System.out.println("#" + number + " " + name + " Fouls=" + fouls + " Points=" + getTotalPoints
+	
+	//public void fullStats();
 
 }
