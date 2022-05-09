@@ -4,6 +4,7 @@
  * @author Anaberdi Meredov
  * @since 2022.05.09
  * @version 2.2 beta
+ * @github https://github.com/sherlock59/Basket_Game.git
  */
 public class BB_Stats_App {
 	
