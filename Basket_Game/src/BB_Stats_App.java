@@ -1,11 +1,9 @@
-import java.util.Scanner;
-
 /**
  * Basketball Stats Application
  * 
- * @author dljohnson1234
- * @since 2022.02.15
- * @version 1.0 beta
+ * @author Anaberdi Meredov
+ * @since 2022.05.09
+ * @version 2.2 beta
  */
 public class BB_Stats_App {
 	
@@ -70,6 +68,7 @@ public class BB_Stats_App {
 		team2.setName(userInput);
 		playersSetup(team2);
     	
+
     } // end of teamSetup
     
     /**

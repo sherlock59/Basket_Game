@@ -1,60 +1,117 @@
 
+/**
+ * This class has necessary functions to show outcome of the game such as statistics of the game with players and scores of two teams
+ * @author Anaberdi Meredov
+ * @since 2022.05.09
+ * @version 2.2 beta
+ */
 public class Team {
 
-	Player player1;
-	
-	Player player2;
-	
+	/**
+	 * declares player 
+	 */
+	private Player Player1;
+	/**
+	 * declares player
+	 */
+	private Player Player2;
+	/**
+	 * name for the players
+	 */
 	private String name;
+	
+	/**
+	 * teams 
+	 */
+	public Team() {
+		name = null;
+		Player1 = new Player();
+		Player2 = new Player();
+	}
+	
+	/**
+	 * @param name 
+	 */
+	public Team(String name) {
+		this(); // calling default constructor
+		this.name = name;
+	}
 
+	/**
+	 * @returns names 
+	 */
 	public String getName() {
 		return name;
 	}
 
+	/**
+	 * @param names
+	 */
 	public void setName(String name) {
 		this.name = name;
 	}
 	
+	/**
+	 * @return
+	 */
 	public Player getPlayer1() {
-		return player1;
+		return Player1;
 	}
 	
+	/**
+	 * @param name
+	 * @param number
+	 */
 	public void setPlayer1(String name , int number) {
-		player1.setName(name);
-		player1.setNumber(number);
+		Player1.setName(name);
+		Player1.setNumber(number);
 	}
 	
+	/**
+	 * @return
+	 */
 	public Player getPlayer2() {
-		return player2;
+		return Player2;
 	}
 	
+	/**
+	 * @param name
+	 * @param number
+	 */
 	public void setPlayer2(String name, int number) {
-		player2.setName(name);
-		player2.setNumber(number);
+		Player2.setName(name);
+		Player2.setNumber(number);
 	}
 	
-	public int getTeamPoints() {
-		int teamPoints = 0;
-		teamPoints = player1.getPoints() + player2.getPoints();
-		return teamPoints;
+	/**
+	 * @return
+	 */
+	public int getTotalPoints() {
+		return Player1.getPoints() + Player2.getPoints();
 	}
 	
-	public int getTeamFouls() {
-		int teamFouls = 0;
-		teamFouls = player1.getFouls() + player2.getFouls();
-		return teamFouls;
+	/**
+	 * @return
+	 */
+	public int getTotalFouls() {
+		return Player1.getFouls() + Player2.getFouls();
 	}
 	
+	/**
+	 *  prints the players
+	 */
 	public void listPlayers() {
-		System.out.println("1 = " + player1.getName() + "#" + player1.getNumber());
-		System.out.println("2 = " + player2.getName() + "#" + player2.getNumber());
+		System.out.println("1 = " + Player1.getName() + " # " + Player1.getNumber());
+		System.out.println("2 = " + Player2.getName() + " # " + Player2.getNumber());
 	}
 	
 
-	//public void displayStats() {
-	//	System.out.println("0 = " + Fouls() ;
+	/**
+	 * displays the status of the game and whoever played it 
+	 */
+	public void displayStats() {
+		System.out.println(name + "  Fouls= " + getTotalFouls() + "  Points= " + getTotalPoints());
 		
-	//}
-
-
+	}
+	
 }
