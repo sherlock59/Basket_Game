@@ -10,9 +10,6 @@ import java.util.Scanner;
  */
 public class Input {
 	
-    /**
-     * 
-     */
     public static Scanner input = new Scanner(System.in);
     
     /**
@@ -24,7 +21,7 @@ public class Input {
 		System.out.print(prompt);
 		return input.nextLine();
 		
-	} // end of getLine
+	} 
 
     /**
      * @param prompt
@@ -45,11 +42,11 @@ public class Input {
 		} // end of while
 			
 		userInput = input.nextInt();
-		input.nextLine(); // consume newline left-over
+		input.nextLine();
 		
 		return userInput;
 		
-	} // end of getInt
+	}
 
     /**
      * @param prompt
@@ -68,20 +65,18 @@ public class Input {
 				
 				if (userInput >= low && userInput <= high) {
 					break;
-				} // end of if
+				} 
 				
     		} else {
     			input.next();	
-    		} // end of if-else
+    		} 
 			
 			System.out.printf("Invalid input! Please enter a number between (%d - %d): ", low, high);
 			
-		} // end of while
+		}
 		
-		input.nextLine(); // consume newline left-over
+		input.nextLine(); 
 
 		return userInput;
-		
-	} // end of getIntRange
-	
-} // end of Input class
+	}
+} 
